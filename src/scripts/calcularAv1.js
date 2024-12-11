@@ -23,8 +23,6 @@ function calcularAv1() {
     resultadoAv1.appendChild(p)
     resultadoAv1.style.display = 'block'
 
-    console.log(p, resultadoAv1)
-
     localStorage.setItem('totalAv1', total.toFixed(1));
 }
 
