@@ -19,6 +19,7 @@ function calcularMf() {
     const p = document.createElement('p')
     p.innerHTML = `A nota da média final é aproximadamente ${total.toFixed(1)}`
     resultadoMf.appendChild(p)
+    resultadoMf.style.display = 'block'
 
     localStorage.clear()
 

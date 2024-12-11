@@ -68,6 +68,8 @@ function calcularAp() {
 
     })
 
+    resultadoAp.style.display = 'block'
+
     localStorage.setItem('notasDasAps', JSON.stringify(notasDasAps))
 
 }

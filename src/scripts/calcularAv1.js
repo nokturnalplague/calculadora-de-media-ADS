@@ -1,6 +1,5 @@
 const resultadoAv1 = document.getElementById('resultado-av1')
 
-
 function calcularAv1() {
 
     resultadoAv1.innerHTML = ''
@@ -22,9 +21,11 @@ function calcularAv1() {
     const p = document.createElement('p')
     p.innerHTML = `A nota da AV1 é aproximadamente ${total.toFixed(1)}`
     resultadoAv1.appendChild(p)
+    resultadoAv1.style.display = 'block'
+
+    console.log(p, resultadoAv1)
 
     localStorage.setItem('totalAv1', total.toFixed(1));
-
 }
 
 export { calcularAv1 }

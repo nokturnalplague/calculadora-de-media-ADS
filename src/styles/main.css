@@ -16,15 +16,44 @@ body {
     align-items: center;
     justify-content: center;
 
-    height: 100vh;
+    padding: 32px;
+
     width: 100vw;
-    
+    min-height: 100vh;
+    height: auto;
+
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
     color: var(--dark);
-    
-    background-image: url('../pictures/polcaTrim.png');
+
     background-color: var(--beige);
+    background-image: url('../pictures/polcaTrim.png');
     background-size: 450px 450px;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 120%;
+}
+
+p, a, label {
+    font-size: 14px;
+    line-height: 120%;
+}
+
+span {
+    font-size: 14px;
+    line-height: 120%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: var(--dark);
 }
 
 main {
@@ -34,68 +63,62 @@ main {
     justify-content: center;
 
     gap: 48px;
-    padding: 96px;
+    padding: 64px 32px;
 
-    height: 70%;
-    width: 60vw;
+    width: 100%;
+    min-height: 600px;
+    height: auto;
 
     background-color: var(--beige);
-    border: 8px var(--dark) solid;
-    box-shadow: 12px 12px 0px var(--dark);
-}
-
-article {
-    height: 100%;
-    width: 100%;
-}
-
-article:has(article + nav) {
-    align-content: space-between;
+    border: 6px var(--dark) solid;
+    box-shadow: 8px 8px 0px var(--dark);
 }
 
 .title {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    gap: 16px;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    justify-content: center;
 
+    gap: 24px;
     width: 100%;
 }
 
 .nav__main {
     flex-direction: column;
-    justify-content: center;
 }
 
 nav a, button {
-    text-decoration: none;
-    font-weight: bold;
+    width: 100%;
+}
 
+nav a, button, input[type="submit"] {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 30%;
+    color: var(--dark);
+    font-weight: 14px;
+    text-decoration: none;
+
     padding: 16px;
 
-    color: var(--dark);
     background-color: var(--light-green);
     border: 3px var(--dark) solid;
     box-shadow: 4px 4px 0px var(--dark);
 }
 
-.nav__main a:hover, button {
+nav a:hover, button:hover, input[type="submit"]:hover {
     background-color: var(--dark-green);
-    border: 3px var(--dark) solid;
-    box-shadow: 4px 4px 0px var(--dark);
 }
 
 #aviso {
@@ -105,10 +128,95 @@ nav a, button {
     padding: 16px;
 }
 
-.buttons {
+article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 36px;
+    
+    gap: 32px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+#calculo-ap form {
+    padding: 32px 0px;
+}
+
+#calculo-ap form, form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+    width: 100%;
+}   
+
+form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+
+    font-size: 14px;
+    line-height: 120%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: var(--dark);
+
+    border: 2px var(--dark) solid;
+    box-shadow: 3px 3px 0px var(--dark);
+}
+
+#resultado-ap, #resultado-av1, #resultado-mf {
+    display: none;
+    background-color: var(--light-green);
+    border: 3px var(--dark-green) solid;
+    box-shadow: 4px 4px 0px var(--dark-green);
+    padding: 32px;
+
+    margin: 24px 0px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1440px) {
+    .buttons {
+        flex-direction: row;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav a {
+        width: 30%;
+    }
+
+    .nav__main {
+        width: 75%;
+    }
+
+    .nav_main a {
+        width: 100%;
+    }
 }

@@ -19,7 +19,7 @@ function criarForm() {
 
         formAp.innerHTML = `
             <div>
-                <label for="portal">Quantas questões você acertou nessa unidade? (0 à 20)</label>
+                <label for="portal">Quantas questões você acertou nessa unidade? <br> (0 à 20)</label>
                 <input type="text" id="portal" min="0" max="20" required>
             </div>
 
@@ -33,16 +33,18 @@ function criarForm() {
         aps.forEach((ap, index) => {
             
             formAp.innerHTML += `
-                <h3>Unidade ${index + 1}</h3>
-
                 <div>
-                    <label for="portal-${index + 1}">Quantas questões você acertou nessa unidade? (0 à 20)</label>
-                    <input type="text" id="portal-${index + 1}" min="0" max="20" required>
-                </div>
+                    <h3>Unidade ${index + 1}</h3>
 
-                <div>
-                    <label for="trabalho-${index + 1}">Qual foi a nota do trabalho nessa unidade?</label>
-                    <input type="text" id="trabalho-${index + 1}" min="0" max="10" required>
+                    <div>
+                        <label for="portal-${index + 1}">Quantas questões você acertou nessa unidade? <br> (0 à 20)</label>
+                        <input type="text" id="portal-${index + 1}" min="0" max="20" required>
+                    </div>
+
+                    <div>
+                        <label for="trabalho-${index + 1}">Qual foi a nota do trabalho nessa unidade?</label>
+                        <input type="text" id="trabalho-${index + 1}" min="0" max="10" required>
+                    </div>
                 </div>
             `
         })
