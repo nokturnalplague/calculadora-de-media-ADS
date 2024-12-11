@@ -30,4 +30,18 @@ function alterarPlaceholderAv1() {
 
 }
 
-export { alterarPlaceholderAv1 }
+function alterarPlaceholderMf() {
+
+    const av1 = JSON.parse(localStorage.getItem('totalAv1'))
+
+    const inputAv1 = document.getElementById('av1')
+    if (av1) {
+
+        inputAv1.value = av1
+        inputAv1.placeholder = av1
+
+    }
+
+}
+
+export { alterarPlaceholderAv1, alterarPlaceholderMf }

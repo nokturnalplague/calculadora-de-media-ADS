@@ -1,6 +1,7 @@
 import { criarElementos, submitAp } from "./criarElementosAp.js"
 import { calcularAv1 } from "./calcularAv1.js"
-import { alterarPlaceholderAv1 } from "./alterarPlaceholder.js"
+import { alterarPlaceholderAv1, alterarPlaceholderMf } from "./alterarPlaceholder.js"
+import { calcularMf } from "./calcularMf.js"
 
 const currentPage = window.location.pathname.split('/').pop()
 
@@ -33,4 +34,24 @@ if (currentPage.startsWith('av1')) {
     
     })
 
-}  
+} 
+
+if (currentPage.startsWith('media-final')) {
+
+    document.addEventListener("DOMContentLoaded", () => {
+        
+        const formMf = document.getElementById('form-mf')
+
+        alterarPlaceholderMf()
+
+        formMf.addEventListener('submit', (event) => {
+
+            event.preventDefault()
+            calcularMf()
+            formMf.reset()
+    
+        })
+    
+    })
+
+}
