@@ -1,4 +1,5 @@
 import { calcularAp } from "./calcularAp.js"
+import { validarInputs } from "./validarInputs.js"
 
 const umaAp = document.getElementById('uma')
 const todasAp = document.getElementById('todas')
@@ -19,12 +20,12 @@ function criarForm() {
         formAp.innerHTML = `
             <div>
                 <label for="portal">Quantas questões você acertou nessa unidade? (0 à 20)</label>
-                <input type="number" id="portal" min="0" max="20" required>
+                <input type="text" id="portal" min="0" max="20" required>
             </div>
 
             <div>
                 <label for="trabalho">Qual foi a nota do trabalho nessa unidade?</label>
-                <input type="number" id="trabalho" min="0" max="10" required>
+                <input type="text" id="trabalho" min="0" max="10" required>
             </div>
         `
     } else {
@@ -36,18 +37,20 @@ function criarForm() {
 
                 <div>
                     <label for="portal-${index + 1}">Quantas questões você acertou nessa unidade? (0 à 20)</label>
-                    <input type="number" id="portal-${index + 1}" min="0" max="20" required>
+                    <input type="text" id="portal-${index + 1}" min="0" max="20" required>
                 </div>
 
                 <div>
                     <label for="trabalho-${index + 1}">Qual foi a nota do trabalho nessa unidade?</label>
-                    <input type="number" id="trabalho-${index + 1}" min="0" max="10" required>
+                    <input type="text" id="trabalho-${index + 1}" min="0" max="10" required>
                 </div>
             `
         })
     }
 
     formAp.innerHTML += `<input type="submit" value="Calcular nota">`
+
+    validarInputs()
 
     exibicaoCalculo.innerHTML = ''
     exibicaoCalculo.appendChild(formAp)
