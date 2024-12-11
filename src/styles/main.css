@@ -1,0 +1,114 @@
+:root {
+    --beige: #E5E1D8;
+    --light-green: #C5C5B9;
+    --dark-green: #A09F8D;
+    --dark: #31312F;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+    
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    
+    background-image: url('../pictures/polcaTrim.png');
+    background-color: var(--beige);
+    background-size: 450px 450px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 48px;
+    padding: 96px;
+
+    height: 70%;
+    width: 60vw;
+
+    background-color: var(--beige);
+    border: 8px var(--dark) solid;
+    box-shadow: 12px 12px 0px var(--dark);
+}
+
+article {
+    height: 100%;
+    width: 100%;
+}
+
+article:has(article + nav) {
+    align-content: space-between;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    width: 100%;
+}
+
+.nav__main {
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav a, button {
+    text-decoration: none;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+    padding: 16px;
+
+    color: var(--dark);
+    background-color: var(--light-green);
+    border: 3px var(--dark) solid;
+    box-shadow: 4px 4px 0px var(--dark);
+}
+
+.nav__main a:hover, button {
+    background-color: var(--dark-green);
+    border: 3px var(--dark) solid;
+    box-shadow: 4px 4px 0px var(--dark);
+}
+
+#aviso {
+    background-color: var(--light-green);
+    border: 3px var(--dark-green) solid;
+    box-shadow: 4px 4px 0px var(--dark-green);
+    padding: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+}
