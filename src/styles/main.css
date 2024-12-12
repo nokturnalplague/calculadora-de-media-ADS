@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -250,7 +251,7 @@ input {
 
     main {
         width: 60%;
-        max-width: 1400px;
+        max-width: 80vw;
         min-height: 70%;
         height: auto;
 
