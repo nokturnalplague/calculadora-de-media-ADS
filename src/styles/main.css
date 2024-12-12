@@ -191,15 +191,18 @@ input {
 
 #resultado-ap, #resultado-av1, #resultado-mf {
     display: none;
+    width: 100%;
+
+    padding: 32px;
+    margin: 24px 0px;
+
     background-color: var(--light-green);
     border: 3px var(--dark-green) solid;
     box-shadow: 4px 4px 0px var(--dark-green);
-    padding: 32px;
-
-    margin: 24px 0px;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1440px) {
+@media only screen and (min-width: 600px) and (max-width: 1439px) {
+
     .buttons {
         flex-direction: row;
     }
@@ -229,5 +232,72 @@ input {
         width: 50%;
     }
 
+}
+
+@media only screen and (min-width: 1440px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    p, a, label {
+        font-size: 18px;
+    }
+
+    main {
+        width: 60%;
+        max-width: 1400px;
+        min-height: 70%;
+        height: auto;
+
+        padding: 96px 72px;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .buttons button {
+        width:50%;
+    }
+
+    .buttons button span {
+        font-size: 18px;
+    }
+
+    article div {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav a {
+        width: 32%;
+    }
+
+    .nav__main a {
+        width: 100%;
+    }
+    
+    form {
+        padding: 16px;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    input[type="submit"] {
+        width: 50%;
+        margin: 24px;
+        font-size: 18px;
+    }
 
 }
