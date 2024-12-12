@@ -7,6 +7,7 @@ O projeto "Calculadora de Média Acadêmica" é uma aplicação web desenvolvida
 ## Autores
 
 - [@nokturnalplague](https://github.com/nokturnalplague)
+- [@kyokitoyo](https://github.com/kyokitoyo)
 
 ## Documentação de cores
 
