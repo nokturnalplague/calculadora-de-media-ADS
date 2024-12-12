@@ -52,8 +52,6 @@ function criarForm() {
 
     formAp.innerHTML += `<input type="submit" value="Calcular nota">`
 
-    validarInputs()
-
     exibicaoCalculo.innerHTML = ''
     exibicaoCalculo.appendChild(formAp)
 
@@ -66,7 +64,7 @@ function criarElementos() {
         resultado.innerHTML = ''
         aps = ['ap']
         criarForm()
-
+        validarInputs()
     })
 
     todasAp.addEventListener('click', () => {
@@ -74,7 +72,7 @@ function criarElementos() {
         resultado.innerHTML = ''
         aps = ['ap1', 'ap2', 'ap3']
         criarForm()
-
+        validarInputs()
     })
 
 }
