@@ -21,8 +21,7 @@ O projeto "Calculadora de Média Acadêmica" é uma aplicação web desenvolvida
 
 ## Demonstração
 
-https://calculadora-de-media-ads.netlify.app/
-
+https://nokturnalplague.github.io/calculadora-de-media-ADS/
 
 ## Documentação
 
